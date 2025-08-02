@@ -3,7 +3,7 @@ import { useUser } from "../../context/UserContext";
 import { useRouter } from "next/navigation";
 import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
-import PDFDocument from "../../components/PDFDocument";
+import PDFDocument from "@/components/PDFDocument";
 
 export default function PreviewPage() {
   const { userData } = useUser();
@@ -38,11 +38,13 @@ export default function PreviewPage() {
           Back
         </button>
         <button
-          onClick={handleDownload}
-          className="flex-1 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition-all"
-        >
-          Download PDF
-        </button>
+  onClick={handleDownload}
+  className="flex-1 bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800 transition-all flex items-center justify-center gap-2"
+>
+  <img src="/Download.svg" alt="Download" className="w-5 h-5" />
+  Download PDF
+</button>
+
       </div>
     </div>
   );
