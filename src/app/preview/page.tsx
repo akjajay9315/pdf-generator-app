@@ -3,7 +3,7 @@ import { useUser } from "../../context/UserContext";
 import { useRouter } from "next/navigation";
 import { pdf } from "@react-pdf/renderer";
 import { saveAs } from "file-saver";
-import PDFDocument from "../../components/PdfDocument";
+import PDFDocument from "../../components/PDFDocument";
 
 export default function PreviewPage() {
   const { userData } = useUser();
